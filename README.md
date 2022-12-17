@@ -18,7 +18,7 @@ The study hopes to answer the following questions:
     > built on LP v Remuneration relationship by using S-R clusters <br>
     > to continue investigation if time permits
 - how groups within the customer base can be used to target specific market segments
-> 5 clusters identified within customer base based in remuneration and spending_score [Python 2]
+> 5 clusters identified within customer base based in remuneration and spending_score [Python 2] <br>
     > Cluster yet to be labelled and categorised (besides by remuneration & spending) 
 - how social data (e.g. customer reviews) can be used to inform marketing campaigns
 - the impact that each product has on sales
