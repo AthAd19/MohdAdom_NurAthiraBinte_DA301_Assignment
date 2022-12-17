@@ -15,7 +15,7 @@ The study hopes to answer the following questions:
 
 - how customers accumulate loyalty points
 > relation to Spending, Remuneration, Age [Python 1]
-    > built on LP v Remuneration relationship by using S-R clusters 
+    > built on LP v Remuneration relationship by using S-R clusters <br>
     > to continue investigation if time permits
 - how groups within the customer base can be used to target specific market segments
 > 5 clusters identified within customer base based in remuneration and spending_score [Python 2]
