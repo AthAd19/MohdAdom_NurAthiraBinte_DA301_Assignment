@@ -1,0 +1,22 @@
+# MohdAdom_NurAthiraBinte_DA301_Assignment
+
+This repository consists of 4 files
+1. a Jupyter Notebook (MohdAdom_NurAthiraBinte_DA301_Assignment_Notebook.ipynb) _**[in progress]**_
+    - Week 1 Assignment portion completed (Linear Regression models of Loyalty Points vs Spending, Remuneration, Age)
+2. an R script (MohdAdom_NurAthiraBinte_DA301_Assignment_Rscript.R) _**[not started]**_
+
+3. a PDF report (MohdAdom_NurAthiraBinte_DA301_Assignment_Report.pdf) 
+   - Word document _**[in progress]**_
+
+4. a Video Presentation (MohdAdom_NurAthiraBinte_DA301_Assignment_Presentation.mp4)
+   - powerpoint sides _**[[not started]**_
+   
+The study hopes to answer the following questions:
+
+- how customers accumulate loyalty points
+> relation to Spending, Remuneration, Age [Python 1]
+- how groups within the customer base can be used to target specific market segments 
+- how social data (e.g. customer reviews) can be used to inform marketing campaigns
+- the impact that each product has on sales
+- how reliable the data is (e.g. normal distribution, skewness, or kurtosis)
+- what the relationship(s) is/are (if any) between North American, European, and global sales? 
