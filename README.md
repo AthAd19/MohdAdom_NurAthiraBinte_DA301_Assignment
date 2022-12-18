@@ -21,6 +21,9 @@ The study hopes to answer the following questions:
 > 5 clusters identified within customer base based in remuneration and spending_score [Python 2] <br>
     > Cluster yet to be labelled and categorised (besides by remuneration & spending) 
 - how social data (e.g. customer reviews) can be used to inform marketing campaigns
+> Sentiment analysis started <br>
+> Word loud, sentiment polarity chart created [Python 3]  <br> 
+> __[FOLLOW-UP]__ Actual sentiment analysis, business pov: marketing use
 - the impact that each product has on sales
 - how reliable the data is (e.g. normal distribution, skewness, or kurtosis)
 - what the relationship(s) is/are (if any) between North American, European, and global sales? 
