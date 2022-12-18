@@ -2,7 +2,8 @@
 
 This repository consists of 4 files
 1. a Jupyter Notebook (MohdAdom_NurAthiraBinte_DA301_Assignment_Notebook.ipynb) _**[in progress]**_
-    - Week 1 Assignment portion completed (Linear Regression models of Loyalty Points vs Spending, Remuneration, Age)
+    - Code, Models & Diagrams complete
+    - Left with actual observations, insights & recommendations
 2. an R script (MohdAdom_NurAthiraBinte_DA301_Assignment_Rscript.R) _**[not started]**_
 
 3. a PDF report (MohdAdom_NurAthiraBinte_DA301_Assignment_Report.pdf) 
