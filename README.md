@@ -4,7 +4,9 @@ This repository consists of 4 files
 1. a Jupyter Notebook (MohdAdom_NurAthiraBinte_DA301_Assignment_Notebook.ipynb) _**[completed]**_
     - Code, Models & Diagrams complete
     - Left with actual observations, insights & recommendations
-2. an R script (MohdAdom_NurAthiraBinte_DA301_Assignment_Rscript.R) _**[in progress]**_
+2. an R script (MohdAdom_NurAthiraBinte_DA301_Assignment_Rscript.R) _**[completed]**_
+    - Code, Models & Diagrams complete
+    - Left with actual observations, insights & recommendations
 
 3. a PDF report (MohdAdom_NurAthiraBinte_DA301_Assignment_Report.pdf) 
    - Word document _**[in progress]**_
@@ -26,7 +28,12 @@ The study hopes to answer the following questions:
 > Word loud, sentiment polarity chart created [Python 3]  <br> 
 > __[FOLLOW-UP]__ Actual sentiment analysis, business pov: marketing use
 - the impact that each product has on sales
-> Briefly explored, but difficult to make any significant insights [R 4]
+> Briefly explored, but difficult to make any significant insights [R 4] <br>
+> Explored further : insights = not normal [R 5]
 - how reliable the data is (e.g. normal distribution, skewness, or kurtosis)
+> Tested and statistics obtained [R 5] <br>
+> To be interpreted & evaluated further in report
 - what the relationship(s) is/are (if any) between North American, European, and global sales? 
-> Briefly explored, but difficult to make any significant insights [R 4]
+> Briefly explored, but difficult to make any significant insights [R 4] <br>
+> Explored Further & tested as model for predictions [R 6] <br>
+> To be further evaluated in roport
