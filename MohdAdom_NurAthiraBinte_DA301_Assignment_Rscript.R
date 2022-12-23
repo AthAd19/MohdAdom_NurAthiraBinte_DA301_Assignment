@@ -82,7 +82,12 @@ view(sales_useful)
 # View the descriptive statistics.
 summary(sales_useful)
 skim(sales_useful)
-n_distinct(sales_useful$Product)
+
+
+# Create Product ID as categorical value (Character)
+sales_useful$ProductID <- as.character(sales_useful$Product)
+skim(sales_useful)
+
 
 ################################################################################
 
@@ -126,6 +131,8 @@ sales_byreg$Region <- factor(sales_byreg$Region, levels=c("Global","NA","EU"))
 ## 2a) Scatterplots
 # Create scatterplots.
 qplot(Product, Global_Sales, data=sales_useful)
+qplot(ProductID, Global_Sales, data=sales_useful,
+      geom=c('point', 'jitter'))
 qplot(Platform, Global_Sales, data=sales_useful,
       geom=c('point', 'jitter'))
 
@@ -143,14 +150,17 @@ qplot(EU_Sales, NA_Sales, data=sales_useful, colour=Platform)
   nrow(sales_useful[which(sales_useful$NA_Sales<sales_useful$EU_Sales),])/
     nrow(sales_useful)*100         
   
-  
 qplot(Product, Sales, data=sales_byreg, colour=Region)
   
 ## 2b) Histograms
 # Create histograms.
+qplot(ProductID, data=sales_useful,ylim = c(0,9))
+qplot(Platform, data=sales_useful)
+
 qplot(NA_Sales, data=sales_useful)
 qplot(EU_Sales, data=sales_useful)
 qplot(Global_Sales, data=sales_useful)
+qplot(Sales, data=sales_byreg, geom='histogram', facets =~Region)
 
 ## 2c) Boxplots
 # Create boxplots.
@@ -563,6 +573,13 @@ summary(sales_MLR)
   # all *** good correlation
   # Adjusted R-squared:  0.9685
 
+#####
+# Using Aggregated dataset
+sales_MLR_p = lm(Global_Sales~NA_Sales+EU_Sales, data=sales_product)
+# Print the summary statistics.
+summary(sales_MLR_p)
+# Adjusted R-squared:  0.9664 
+
 ###############################################################################
 
 # 4. Predictions based on given values
@@ -571,7 +588,7 @@ sales_test <- data.frame(NA_Sales = c(34.02, 3.93, 2.73, 2.26, 22.08),
                          EU_Sales = c(23.80, 1.56, 0.65, 0.97, 0.52))
 sales_test
 
-# Predicting global sales using MLR model 
+# Predicting global sales using MLR model (From original dataset)
 predictSales = predict(sales_MLR, newdata=sales_test,
                       interval='confidence')
 
@@ -584,6 +601,18 @@ predictSales
   # 4  4.134744  4.009122  4.260365         3.53    [out of range]
   # 5 26.431567 25.413344 27.449791         23.21   [out of range](Pdt: 326)
 
+
+# Predicting global sales using MLR model (From aggregated dataset)
+predictSales_p = predict(sales_MLR_p, newdata=sales_test,
+                         interval='confidence')
+predictSales_p
+#   Predicted                         Actual Global Sales
+#       fit       lwr       upr
+# 1 68.056548 66.429787 69.683310         67.85   [within range]
+# 2  7.356754  7.099418  7.614090         6.04    [out of range]
+# 3  4.908353  4.614521  5.202185         4.32    [out of range]
+# 4  4.761039  4.478855  5.043223         3.53    [out of range]
+# 5 26.625558 25.367353 27.883763         23.21   [out of range](Pdt: 326)
 
 #######
 # 3b. Creating MLR model including Product ID to test if that will improve the model
@@ -602,10 +631,10 @@ summary(sales_MLR_pdt)
   # Product ID has high significance 
   # Adjusted R-squared:  0.9709
 
-
 sales_test_All <- data.frame(NA_Sales = c(34.02, 3.93, 2.73, 2.26, 22.08),
                              EU_Sales = c(23.80, 1.56, 0.65, 0.97, 0.52),
                              Product  = c(107,3267,6815,2877,326))
+
 predictSales_pdt = predict(sales_MLR_pdt, newdata=sales_test_All,
                                interval='confidence')
 predictSales_pdt
